@@ -19,8 +19,7 @@ public class FunctionServiceImpl implements FunctionService {
 
     @Override
     public List<Function> findParentFuntions() {
-        DetachedCriteria dc = DetachedCriteria.forClass(Function.class);
-        return fd.findByCriteria(dc);
+        return fd.findAll();
     }
 
     @Override

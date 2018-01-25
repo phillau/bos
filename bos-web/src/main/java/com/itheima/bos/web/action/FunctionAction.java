@@ -16,7 +16,7 @@ public class FunctionAction extends BaseAction<Function>{
     private FunctionService fs;
     public String listajax(){
         List<Function> list = fs.findParentFuntions();
-        this.java2Json(list,new String[]{"parentFunction","roles","children"});
+        this.java2Json(list,new String[]{"parentFunction","roles"});
         return null;
     }
 

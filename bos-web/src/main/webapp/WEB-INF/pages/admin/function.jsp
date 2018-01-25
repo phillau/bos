@@ -44,7 +44,7 @@
             fit : true,
 			columns : [[
 			  {
-				  field : 'id',
+				  field : 'code',
 				  title : '关键字',
 				  width : 200
 			  },
