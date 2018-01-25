@@ -45,7 +45,7 @@
 			columns : [[
 			  {
 				  field : 'id',
-				  title : '编号',
+				  title : '关键字',
 				  width : 200
 			  },
 			  {
