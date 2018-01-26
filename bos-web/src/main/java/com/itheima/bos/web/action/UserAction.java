@@ -36,7 +36,7 @@ public class UserAction extends BaseAction<User> {
 		//从Session中获取生成的验证码
 		String validatecode = (String) ServletActionContext.getRequest().getSession().getAttribute("key");
 		//校验验证码是否输入正确
-		if(StringUtils.isNotBlank(checkcode) && checkcode.equals(validatecode)){
+//		if(StringUtils.isNotBlank(checkcode) && checkcode.equals(validatecode)){
 			//输入的验证码正确
 			/**
 			 * 使用shiro框架提供的方式进行认证
@@ -54,11 +54,12 @@ public class UserAction extends BaseAction<User> {
                 return LOGIN;
             }
             return HOME;
-		}else{
+//		}
+		/*else{
 			//输入的验证码错误,设置提示信息，跳转到登录页面
 			this.addActionError("输入的验证码错误！");
 			return LOGIN;
-		}
+		}*/
 	}
 
 	/**
