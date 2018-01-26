@@ -81,4 +81,7 @@ public class Function implements java.io.Serializable {
 	public void setChildren(Set children) {
 		this.children = children;
 	}
+	public String getText(){
+		return name;
+	}
 }

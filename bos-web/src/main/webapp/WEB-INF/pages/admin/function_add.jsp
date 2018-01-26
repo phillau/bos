@@ -33,7 +33,7 @@
 			$("#functionForm").submit();
 		});
 	});
-</script>	
+</script>
 </head>
 <body class="easyui-layout">
 <div data-options="region:'north'">
@@ -50,7 +50,7 @@
 					<tr>
 						<td width="200">编号</td>
 						<td>
-							<input type="text" name="id" class="easyui-validatebox" data-options="required:true" />						
+							<input type="text" name="id" class="easyui-validatebox" data-options="required:true" />
 						</td>
 					</tr>
 					<tr>
@@ -80,7 +80,7 @@
 						<td>父功能点</td>
 						<td>
 							<input name="parentFunction.id" class="easyui-combotree"
-							data-options="valueField:'id',textField:'name',url:'functionAction_listajax.action'" style="width:170px;" />\
+							data-options="url:'functionAction_listajax'" style="width:170px;" />
 						</td>
 					</tr>
 					<tr>

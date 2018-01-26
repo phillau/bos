@@ -11,6 +11,7 @@ import java.util.List;
 public class FunctionDaoImpl extends BaseDaoImpl<Function> implements IFunctionDao {
     public List<Function> findAll() {
         String hql = "FROM Function f WHERE f.parentFunction IS NULL";
-        return (List<Function>) this.getHibernateTemplate().find(hql);
+        List<Function> list = (List<Function>) this.getHibernateTemplate().find(hql);
+        return list;
     }
 }

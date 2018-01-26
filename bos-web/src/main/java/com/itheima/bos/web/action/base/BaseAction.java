@@ -59,6 +59,7 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T> {
 	 * @param exclueds
 	 */
 	public void java2Json(List o ,String[] exclueds){
+		System.out.println(o);
 		JsonConfig jsonConfig = new JsonConfig();
 		//指定哪些属性不需要转json
 		jsonConfig.setExcludes(exclueds);
