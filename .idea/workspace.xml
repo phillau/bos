@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="008fd08d-c6c8-43f1-8fe2-195760200e22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/Role.hbm.xml" afterPath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/Role.hbm.xml" />
-      <change beforePath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/User.hbm.xml" afterPath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/User.hbm.xml" />
-      <change beforePath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/User.java" afterPath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/User.java" />
-      <change beforePath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java" />
-      <change beforePath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IUserService.java" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IUserService.java" />
-      <change beforePath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java" afterPath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java" afterPath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/bos-web/src/main/resources/struts.xml" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role.jsp" afterPath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role.jsp" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp" afterPath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/userinfo.jsp" afterPath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/userinfo.jsp" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/userlist.jsp" afterPath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/userlist.jsp" />
       <change beforePath="$PROJECT_DIR$/bos-web/target/tomcat/logs/access_log.2018-01-27" afterPath="$PROJECT_DIR$/bos-web/target/tomcat/logs/access_log.2018-01-27" />
     </list>
     <ignored path="$PROJECT_DIR$/bos-dao/target/" />
@@ -74,7 +60,7 @@
       <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="358">
               <caret line="127" column="13" lean-forward="false" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
               <folding>
                 <element signature="e#869#870#0" expanded="true" />
@@ -261,7 +247,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="475" />
     <option name="y" value="24" />
     <option name="width" value="1346" />
@@ -539,8 +525,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -551,7 +536,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15485996" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28830314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28830314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -560,7 +545,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32289952" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32289952" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1005,7 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="358">
           <caret line="127" column="13" lean-forward="false" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
           <folding>
             <element signature="e#869#870#0" expanded="true" />

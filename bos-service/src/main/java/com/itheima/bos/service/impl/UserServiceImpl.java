@@ -33,7 +33,10 @@ public class UserServiceImpl implements IUserService{
 
 	@Override
 	public void save(User model, String[] roleIds) {
-	    if(roleIds!=null&&roleIds.length>0){
+		String password = model.getPassword();
+		String md5Password = MD5Utils.md5(password);
+		model.setPassword(md5Password);
+		if(roleIds!=null&&roleIds.length>0){
             for(int i=0;i<roleIds.length;i++){
                 Role role = new Role(roleIds[i]);
                 model.getRoles().add(role);
