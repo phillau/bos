@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
+
 @Controller
 @Scope("prototype")
 public class RoleAction extends BaseAction<Role>{
@@ -27,6 +29,12 @@ public class RoleAction extends BaseAction<Role>{
     public String pageQuery(){
         irs.pageQuery(pageBean);
         this.java2Json(pageBean,new String[]{"functions","users"});
+        return NONE;
+    }
+
+    public String listajax(){
+        List<Role> roles = (List<Role>) irs.findRoles();
+        this.java2Json(roles,new String[]{"functions","users"});
         return NONE;
     }
 }

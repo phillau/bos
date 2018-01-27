@@ -8,4 +8,5 @@ public interface IUserService {
 
 	public void editPassword(String id, String password);
 
+    void save(User model, String[] roleIds);
 }

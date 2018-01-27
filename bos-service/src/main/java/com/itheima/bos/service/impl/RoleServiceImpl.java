@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -31,5 +32,10 @@ public class RoleServiceImpl implements IRoleService {
     @Override
     public void pageQuery(PageBean pageBean) {
         ird.pageQuery(pageBean);
+    }
+
+    @Override
+    public List<Role> findRoles() {
+        return ird.findAll();
     }
 }

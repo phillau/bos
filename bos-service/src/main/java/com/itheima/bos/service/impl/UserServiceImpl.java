@@ -1,5 +1,6 @@
 package com.itheima.bos.service.impl;
 
+import com.itheima.bos.domain.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,5 +29,16 @@ public class UserServiceImpl implements IUserService{
 		//使用MD5加密密码
 		password = MD5Utils.md5(password);
 		userDao.executeUpdate("user.editpassword", password,id);
+	}
+
+	@Override
+	public void save(User model, String[] roleIds) {
+	    if(roleIds!=null&&roleIds.length>0){
+            for(int i=0;i<roleIds.length;i++){
+                Role role = new Role(roleIds[i]);
+                model.getRoles().add(role);
+            }
+        }
+		userDao.save(model);
 	}
 }
