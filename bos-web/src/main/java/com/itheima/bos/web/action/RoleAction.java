@@ -23,4 +23,10 @@ public class RoleAction extends BaseAction<Role>{
         irs.save(model,functionIds);
         return LIST;
     }
+
+    public String pageQuery(){
+        irs.pageQuery(pageBean);
+        this.java2Json(pageBean,new String[]{"functions","users"});
+        return NONE;
+    }
 }

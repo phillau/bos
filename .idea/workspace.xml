@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008fd08d-c6c8-43f1-8fe2-195760200e22" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/IRoleDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/impl/RoleDaoImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/Function.java" afterPath="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/Function.java" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java" afterPath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/bos-web/src/main/resources/struts.xml" />
-      <change beforePath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp" afterPath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp" />
-      <change beforePath="$PROJECT_DIR$/bos-web/target/tomcat/work/Tomcat/localhost/bos/org/apache/jsp/WEB_002dINF/pages/admin/role_005fadd_jsp.class" afterPath="$PROJECT_DIR$/bos-web/target/tomcat/work/Tomcat/localhost/bos/org/apache/jsp/WEB_002dINF/pages/admin/role_005fadd_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/bos-web/target/tomcat/work/Tomcat/localhost/bos/org/apache/jsp/WEB_002dINF/pages/admin/role_005fadd_jsp.java" afterPath="$PROJECT_DIR$/bos-web/target/tomcat/work/Tomcat/localhost/bos/org/apache/jsp/WEB_002dINF/pages/admin/role_005fadd_jsp.java" />
+      <change beforePath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java" />
+      <change beforePath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/bos-service/target/classes/com/itheima/bos/service/IRoleService.class" afterPath="$PROJECT_DIR$/bos-service/target/classes/com/itheima/bos/service/IRoleService.class" />
+      <change beforePath="$PROJECT_DIR$/bos-service/target/classes/com/itheima/bos/service/impl/RoleServiceImpl.class" afterPath="$PROJECT_DIR$/bos-service/target/classes/com/itheima/bos/service/impl/RoleServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java" afterPath="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java" />
+      <change beforePath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role.jsp" afterPath="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role.jsp" />
+      <change beforePath="$PROJECT_DIR$/bos-web/target/classes/com/itheima/bos/web/action/RoleAction.class" afterPath="$PROJECT_DIR$/bos-web/target/classes/com/itheima/bos/web/action/RoleAction.class" />
+      <change beforePath="$PROJECT_DIR$/bos-web/target/tomcat/logs/access_log.2018-01-26" afterPath="$PROJECT_DIR$/bos-web/target/tomcat/logs/access_log.2018-01-26" />
     </list>
     <ignored path="$PROJECT_DIR$/bos-dao/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="RoleAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="250">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#542#543#0" expanded="true" />
@@ -47,66 +44,97 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BaseAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/base/BaseAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos-web/src/main/resources/struts.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-108">
+              <caret line="53" column="71" lean-forward="true" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRoleService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRoleDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/IRoleDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IBaseDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/base/IBaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/base/impl/BaseDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="85" column="44" lean-forward="true" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RoleServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="405">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#699#709#0" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="role_add.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp">
+      <file leaf-file-name="function.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/function.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="100" column="48" lean-forward="true" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
+            <state relative-caret-position="407">
+              <caret line="43" column="23" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="43" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java">
+      <file leaf-file-name="role.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IRegionDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/IRegionDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/impl/RoleDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoticebillDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/impl/NoticebillDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="293">
+              <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -158,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/noticebillAction.java" />
         <option value="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/DecidedzoneAction.java" />
         <option value="$PROJECT_DIR$/bos-utils/src/main/java/com/itheima/crm/ICustomerService.java" />
@@ -200,14 +227,16 @@
         <option value="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/base/BaseAction.java" />
         <option value="$PROJECT_DIR$/bos-web/src/main/webapp/json/region.json" />
         <option value="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java" />
-        <option value="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java" />
         <option value="$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/IRoleDao.java" />
         <option value="$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/impl/RoleDaoImpl.java" />
-        <option value="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java" />
         <option value="$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/Function.java" />
-        <option value="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/bos-web/src/main/resources/struts.xml" />
         <option value="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp" />
+        <option value="$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/base/impl/BaseDaoImpl.java" />
+        <option value="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java" />
+        <option value="$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role.jsp" />
+        <option value="$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java" />
       </list>
     </option>
   </component>
@@ -223,7 +252,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="475" />
     <option name="y" value="24" />
     <option name="width" value="1346" />
@@ -247,8 +276,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -274,23 +304,6 @@
               <item name="bos-domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bos-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bos-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="bos-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bos-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bos-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="bos-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bos-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -338,6 +351,16 @@
               <item name="bos-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="bos-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -348,11 +371,40 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bos-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="bos-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="bos-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="bos-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -522,7 +574,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -532,19 +584,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47775948" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47775948" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28830314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496112" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3443163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.098846786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -585,29 +637,19 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="31" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="MavenRunConfiguration">
+        <watch expression="json" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/ognl/ognl/3.0.6/ognl-3.0.6-sources.jar!/ognl/ObjectMethodAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/xwork/xwork-core/2.3.24/xwork-core-2.3.24-sources.jar!/com/opensymphony/xwork2/ognl/accessor/XWorkMethodAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/xwork/xwork-core/2.3.24/xwork-core-2.3.24-sources.jar!/com/opensymphony/xwork2/DefaultActionInvocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2582">
@@ -719,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bos-utils/src/main/java/com/itheima/bos/utils/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -754,13 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/function.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4104">
@@ -773,9 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,14 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding>
-            <element signature="e#648#649#0" expanded="false" />
-            <element signature="e#683#684#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#767#768#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#867#868#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="291" column="0" lean-forward="false" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,18 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <element signature="e#3788#3929#0" expanded="true" />
-            <element signature="e#3928#3929#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/base/BaseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,7 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1558">
           <caret line="82" column="70" lean-forward="false" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,36 +869,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/base/impl/BaseDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/base/IBaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/impl/RoleDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="76">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -911,23 +887,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/Function.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,24 +898,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/IRoleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        <state relative-caret-position="741">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -961,10 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding>
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,29 +931,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bos-web/src/main/resources/struts.xml">
+    <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="53" column="71" lean-forward="true" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
+        <state relative-caret-position="304">
+          <caret line="115" column="24" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/base/IBaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/IRoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-utils/src/main/java/com/itheima/bos/utils/PageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-dao/src/main/java/com/itheima/bos/dao/base/impl/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="85" column="44" lean-forward="true" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-domain/src/main/java/com/itheima/bos/domain/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/IRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/function.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="43" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bos-service/src/main/java/com/itheima/bos/service/impl/RoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        <state relative-caret-position="405">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#699#709#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bos-web/src/main/webapp/WEB-INF/pages/admin/role_add.jsp">
+    <entry file="file://$PROJECT_DIR$/bos-web/src/main/resources/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="100" column="48" lean-forward="true" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
+        <state relative-caret-position="-108">
+          <caret line="53" column="71" lean-forward="true" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/RoleAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos-web/src/main/java/com/itheima/bos/web/action/base/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
