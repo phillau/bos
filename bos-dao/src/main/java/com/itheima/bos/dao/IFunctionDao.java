@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface IFunctionDao extends IBaseDao<Function>{
     List<Function> findFunctionsByUserId(String id);
+
+    List<Function> findMenuFunctionsByUserId(String uid);
 }

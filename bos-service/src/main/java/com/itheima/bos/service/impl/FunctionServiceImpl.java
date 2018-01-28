@@ -34,7 +34,7 @@ public class FunctionServiceImpl implements FunctionService {
 
     @Override
     public List<Function> listMenuByUserId(String uid) {
-        List<Function> list = fd.findFunctionsByUserId(uid);
+        List<Function> list = fd.findMenuFunctionsByUserId(uid);
         return list;
     }
 }
