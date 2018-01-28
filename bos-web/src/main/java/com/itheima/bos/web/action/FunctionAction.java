@@ -1,7 +1,9 @@
 package com.itheima.bos.web.action;
 
 import com.itheima.bos.domain.Function;
+import com.itheima.bos.domain.User;
 import com.itheima.bos.service.FunctionService;
+import com.itheima.bos.utils.BOSUtils;
 import com.itheima.bos.web.action.base.BaseAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -34,6 +36,13 @@ public class FunctionAction extends BaseAction<Function>{
         pageBean.setCurrentPage(Integer.parseInt(page));
         fs.pageQuery(pageBean);
         this.java2Json(pageBean,new String[]{"parentFunction","roles","children"});
+        return NONE;
+    }
+
+    public String listMenuByUser() {
+        User loginUser = BOSUtils.getLoginUser();
+        List<Function> list = fs.listMenuByUserId(loginUser.getId());
+        this.java2Json(list,new String[]{"parentFunction","children","roles"});
         return null;
     }
 }

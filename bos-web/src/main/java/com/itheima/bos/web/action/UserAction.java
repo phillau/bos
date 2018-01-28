@@ -127,4 +127,10 @@ public class UserAction extends BaseAction<User> {
 		userService.save(model,roleIds);
 		return LIST;
 	}
+
+	public String pageQuery(){
+		userService.pageQuery(pageBean);
+		this.java2Json(pageBean,new String[]{"noticebills","roles"});
+		return NONE;
+	}
 }

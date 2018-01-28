@@ -1,6 +1,8 @@
 package com.itheima.bos.realm;
 
+import com.itheima.bos.dao.IFunctionDao;
 import com.itheima.bos.dao.IUserDao;
+import com.itheima.bos.domain.Function;
 import com.itheima.bos.domain.User;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -9,9 +11,13 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 public class BOSRealm extends AuthorizingRealm {
     @Autowired
     private IUserDao userDao;
+    @Autowired
+    private IFunctionDao ifd;
     //认证方法
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
@@ -33,8 +39,11 @@ public class BOSRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        info.addStringPermission("staff-list");
-        //TODO 后期修改为根据当前用户查询数据库，并获取实际对应的权限
+        User user = (User) principalCollection.getPrimaryPrincipal();
+        List<Function> functions = ifd.findFunctionsByUserId(user.getId());
+        for (Function function:functions) {
+            info.addStringPermission(function.getCode());
+        }
         return info;
     }
 }

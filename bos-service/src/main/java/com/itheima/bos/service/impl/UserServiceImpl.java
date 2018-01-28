@@ -1,6 +1,7 @@
 package com.itheima.bos.service.impl;
 
 import com.itheima.bos.domain.Role;
+import com.itheima.bos.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,5 +44,10 @@ public class UserServiceImpl implements IUserService{
             }
         }
 		userDao.save(model);
+	}
+
+	@Override
+	public void pageQuery(PageBean pageBean) {
+		userDao.pageQuery(pageBean);
 	}
 }

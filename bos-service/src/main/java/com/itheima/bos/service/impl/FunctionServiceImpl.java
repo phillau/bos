@@ -31,4 +31,10 @@ public class FunctionServiceImpl implements FunctionService {
     public void pageQuery(PageBean pageBean) {
         fd.pageQuery(pageBean);
     }
+
+    @Override
+    public List<Function> listMenuByUserId(String uid) {
+        List<Function> list = fd.findFunctionsByUserId(uid);
+        return list;
+    }
 }

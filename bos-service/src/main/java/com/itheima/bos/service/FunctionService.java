@@ -11,4 +11,6 @@ public interface FunctionService {
     void save(Function model);
 
     void pageQuery(PageBean pageBean);
+
+    List<Function> listMenuByUserId(String id);
 }

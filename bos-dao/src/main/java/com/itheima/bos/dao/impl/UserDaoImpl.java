@@ -2,6 +2,7 @@ package com.itheima.bos.dao.impl;
 
 import java.util.List;
 
+import com.itheima.bos.domain.Function;
 import org.springframework.stereotype.Repository;
 
 import com.itheima.bos.dao.IUserDao;
@@ -31,4 +32,5 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements IUserDao {
 		}
 		return null;
 	}
+
 }

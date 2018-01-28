@@ -79,6 +79,12 @@
 
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<property name="realm" ref="bosReal"></property>
+		<property name="cacheManager" ref="ehcache"></property>
+	</bean>
+
+	<bean id="ehcache" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<!--注入配置文件-->
+		<property name="cacheManagerConfigFile" value="classpath:ehcache.xml"></property>
 	</bean>
 
 	<bean id="bosReal" class="com.itheima.bos.realm.BOSRealm"></bean>
