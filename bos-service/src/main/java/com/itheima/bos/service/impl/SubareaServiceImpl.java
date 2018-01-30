@@ -42,9 +42,6 @@ public class SubareaServiceImpl implements ISubareaService {
 		return subareaDao.findByCriteria(detachedCriteria);
 	}
 
-	//@Autowired
-	//private IDecidedzoneDao decidedzoneDao;
-	
 	/**
 	 * 根据定区id查询关联的分区
 	 */
@@ -53,5 +50,10 @@ public class SubareaServiceImpl implements ISubareaService {
 		//添加过滤条件
 		detachedCriteria.add(Restrictions.eq("decidedzone.id", decidedzoneId));
 		return subareaDao.findByCriteria(detachedCriteria );
+	}
+
+	@Override
+	public List<Object> findHchartsSubarea() {
+		return subareaDao.findHchartsSubarea();
 	}
 }

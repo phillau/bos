@@ -26,6 +26,10 @@
 <script
 	src="${pageContext.request.contextPath }/js/easyui/locale/easyui-lang-zh_CN.js"
 	type="text/javascript"></script>
+<!-- 导入hcharts类库 -->
+<script src="${pageContext.request.contextPath }/js/hcharts/highcharts.js"></script>
+<script src="${pageContext.request.contextPath }/js/hcharts/modules/exporting.js"></script>
+
 <script type="text/javascript">
 	function doAdd(){
 		$('#addSubareaWindow').window("open");
@@ -53,6 +57,47 @@
 	function doImport(){
 		alert("导入");
 	}
+
+	//分区饼图
+    function doPie(){
+        $('#pieWindow').window("open");
+        $.post("subareaAction_hchartsPie.action",function(data){
+            $("#pie").highcharts({
+                             chart: {
+                                    plotBackgroundColor: null,
+                                    plotBorderWidth: null,
+                                    plotShadow: false,
+                                    type: 'pie'
+                                },
+                                title: {
+                                       text: '分区饼图'
+                                   },
+                                   tooltip: {
+                                       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                   },
+                                   plotOptions: {
+                                       pie: {
+                                           allowPointSelect: true,
+                                           cursor: 'pointer',
+                                           dataLabels: {
+                                               enabled: true,
+                                               format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                               style: {
+                                                   color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                               }
+                                           }
+                                       }
+                                   },
+                                   series: [{
+                                       name: 'Brands',
+                                       colorByPoint: true,
+                                       data:data
+                                   }]
+                                });
+        },"json");
+
+
+    }
 	
 	//工具栏
 	var toolbar = [ {
@@ -85,7 +130,12 @@
 		text : '导出',
 		iconCls : 'icon-undo',
 		handler : doExport
-	}];
+	},{
+      		id : 'button-hcharts',
+      		text : '分区饼图',
+      		iconCls : 'icon-search',
+      		handler : doPie
+     }];
 	// 定义列
 	var columns = [ [ {
 		field : 'id',
@@ -190,7 +240,18 @@
 	        height: 400,
 	        resizable:false
 	    });
-		
+
+        // 分区饼图窗口
+        $('#pieWindow').window({
+            title: '分区饼图',
+            width: 800,
+            modal: true,
+            shadow: true,
+            closed: true,
+            height: 450,
+            resizable:false
+        });
+
 		//定义一个工具方法，用于将指定的form表单中所有的输入项转为json数据{key:value,key:value}
 		$.fn.serializeJson=function(){  
             var serializeObj={};  
@@ -323,5 +384,10 @@
 			</form>
 		</div>
 	</div>
+
+	<div class="easyui-window" title="分区饼图窗口" id="pieWindow" collapsible="false" minimizable="false" maximizable="false" style="top:20px;left:200px">
+        <div style="overflow:auto;padding:5px;" border="false" id="pie">
+        </div>
+    </div>
 </body>
 </html>

@@ -143,6 +143,12 @@ public class SubareaAction extends BaseAction<Subarea>{
 		return NONE;
 	}
 
+	public String hchartsPie(){
+		List<Object> o = subareaService.findHchartsSubarea();
+		this.java2Json(o,new String[]{});
+		return NONE;
+	}
+
 	public String getDecidedzoneId() {
 		return decidedzoneId;
 	}

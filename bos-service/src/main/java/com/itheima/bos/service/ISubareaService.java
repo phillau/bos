@@ -17,4 +17,5 @@ public interface ISubareaService {
 
 	public List<Subarea> findListByDecidedzoneId(String decidedzoneId);
 
+    List<Object> findHchartsSubarea();
 }
