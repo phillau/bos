@@ -26,6 +26,10 @@
 <script
 	src="${pageContext.request.contextPath }/js/easyui/locale/easyui-lang-zh_CN.js"
 	type="text/javascript"></script>
+<!-- 导入hcharts类库 -->
+<script src="${pageContext.request.contextPath }/js/hcharts/highcharts.js"></script>
+<script src="${pageContext.request.contextPath }/js/hcharts/modules/exporting.js"></script>
+
 <script type="text/javascript">
 	function doAdd(){
 		$('#addSubareaWindow').window("open");
@@ -43,13 +47,57 @@
 		$('#searchWindow').window("open");
 	}
 	
+	//导出按钮对应的处理函数
 	function doExport(){
-		alert("导出");
+		//发送请求，请求Action，进行文件下载
+		window.location.href = "subareaAction_exportXls.action";
+		//$.post("subareaAction_exportXls.action");
 	}
 	
 	function doImport(){
 		alert("导入");
 	}
+
+	//分区饼图
+    function doPie(){
+        $('#pieWindow').window("open");
+        $.post("subareaAction_hchartsPie.action",function(data){
+            $("#pie").highcharts({
+                             chart: {
+                                    plotBackgroundColor: null,
+                                    plotBorderWidth: null,
+                                    plotShadow: false,
+                                    type: 'pie'
+                                },
+                                title: {
+                                       text: '分区饼图'
+                                   },
+                                   tooltip: {
+                                       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                   },
+                                   plotOptions: {
+                                       pie: {
+                                           allowPointSelect: true,
+                                           cursor: 'pointer',
+                                           dataLabels: {
+                                               enabled: true,
+                                               format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                               style: {
+                                                   color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                               }
+                                           }
+                                       }
+                                   },
+                                   series: [{
+                                       name: 'Brands',
+                                       colorByPoint: true,
+                                       data:data
+                                   }]
+                                });
+        },"json");
+
+
+    }
 	
 	//工具栏
 	var toolbar = [ {
@@ -82,7 +130,12 @@
 		text : '导出',
 		iconCls : 'icon-undo',
 		handler : doExport
-	}];
+	},{
+      		id : 'button-hcharts',
+      		text : '分区饼图',
+      		iconCls : 'icon-search',
+      		handler : doPie
+     }];
 	// 定义列
 	var columns = [ [ {
 		field : 'id',
@@ -157,10 +210,10 @@
 			border : true,
 			rownumbers : true,
 			striped : true,
-			pageList: [30,50,100],
+			pageList: [1],
 			pagination : true,
 			toolbar : toolbar,
-			url : "json/subarea.json",
+			url : "subareaAction_pageQuery.action",
 			idField : 'id',
 			columns : columns,
 			onDblClickRow : doDblClickRow
@@ -187,10 +240,45 @@
 	        height: 400,
 	        resizable:false
 	    });
-		$("#btn").click(function(){
-			alert("执行查询...");
-		});
+
+        // 分区饼图窗口
+        $('#pieWindow').window({
+            title: '分区饼图',
+            width: 800,
+            modal: true,
+            shadow: true,
+            closed: true,
+            height: 450,
+            resizable:false
+        });
+
+		//定义一个工具方法，用于将指定的form表单中所有的输入项转为json数据{key:value,key:value}
+		$.fn.serializeJson=function(){  
+            var serializeObj={};  
+            var array=this.serializeArray();
+            $(array).each(function(){  
+                if(serializeObj[this.name]){  
+                    if($.isArray(serializeObj[this.name])){  
+                        serializeObj[this.name].push(this.value);  
+                    }else{  
+                        serializeObj[this.name]=[serializeObj[this.name],this.value];  
+                    }  
+                }else{  
+                    serializeObj[this.name]=this.value;   
+                }  
+            });  
+            return serializeObj;  
+        }; 
 		
+		$("#btn").click(function(){
+			//将指定的form表单中所有的输入项转为json数据{key:value,key:value}
+			var p = $("#searchForm").serializeJson();
+			console.info(p);
+			//调用数据表格的load方法，重新发送一次ajax请求，并且提交参数
+			$("#grid").datagrid("load",p);
+			//关闭查询窗口
+			$("#searchWindow").window("close");
+		});
 	});
 
 	function doDblClickRow(){
@@ -207,24 +295,32 @@
 		<div style="height:31px;overflow:hidden;" split="false" border="false" >
 			<div class="datagrid-toolbar">
 				<a id="save" icon="icon-save" href="#" class="easyui-linkbutton" plain="true" >保存</a>
+				<script type="text/javascript">
+					$(function(){
+						$("#save").click(function(){
+							//表单校验
+							var r = $("#addSubareaForm").form('validate');
+							if(r){
+								$("#addSubareaForm").submit();
+							}
+						});
+					});
+				</script>
 			</div>
 		</div>
 		
 		<div style="overflow:auto;padding:5px;" border="false">
-			<form>
+			<form id="addSubareaForm" method="post" action="subareaAction_add.action">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="2">分区信息</td>
 					</tr>
 					<tr>
-						<td>分拣编码</td>
-						<td><input type="text" name="id" class="easyui-validatebox" required="true"/></td>
-					</tr>
-					<tr>
 						<td>选择区域</td>
 						<td>
 							<input class="easyui-combobox" name="region.id"  
-    							data-options="valueField:'id',textField:'name',url:'json/standard.json'" />  
+    							data-options="valueField:'id',textField:'name',mode:'remote',
+    							url:'regionAction_listajax.action'" />
 						</td>
 					</tr>
 					<tr>
@@ -260,7 +356,7 @@
 	<!-- 查询分区 -->
 	<div class="easyui-window" title="查询分区窗口" id="searchWindow" collapsible="false" minimizable="false" maximizable="false" style="top:20px;left:200px">
 		<div style="overflow:auto;padding:5px;" border="false">
-			<form>
+			<form id="searchForm">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="2">查询条件</td>
@@ -288,5 +384,10 @@
 			</form>
 		</div>
 	</div>
+
+	<div class="easyui-window" title="分区饼图窗口" id="pieWindow" collapsible="false" minimizable="false" maximizable="false" style="top:20px;left:200px">
+        <div style="overflow:auto;padding:5px;" border="false" id="pie">
+        </div>
+    </div>
 </body>
 </html>

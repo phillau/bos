@@ -30,7 +30,10 @@
 	$(function(){
 		$("body").css({visibility:"visible"});
 		$('#save').click(function(){
-			$('#form').submit();
+		    var v = $('#form').form("validate");
+		    if(v){
+		        $('#form').submit();
+		    }
 		});
 	});
 </script>	
@@ -42,7 +45,7 @@
 		</div>
 	</div>
     <div region="center" style="overflow:auto;padding:5px;" border="false">
-       <form id="form" method="post" >
+       <form id="form" method="post" action="userAction_save">
            <table class="table-edit"  width="95%" align="center">
            		<tr class="title"><td colspan="4">基本信息</td></tr>
 	           	<tr><td>用户名:</td><td><input type="text" name="username" id="username" class="easyui-validatebox" required="true" /></td>
@@ -74,6 +77,22 @@
 					</td>
 				</tr>
 	           	<tr><td>备注:</td><td colspan="3"><textarea style="width:80%"></textarea></td></tr>
+	           	<tr>
+	           	<script type="text/javascript">
+                    $(function(){
+                        $.post("roleAction_listajax",
+                        function(data){
+                            for(var i=0;i<data.length;i++){
+                                var id = data[i].id;
+                                var name = data[i].name;
+                                $("#roleIds").append('<input id="'+id+'" type="checkbox" name="roleIds" value="'+id+'"><label for="'+id+'">'+name+'</label>');
+                            }
+                          },"json");
+                    });
+                </script>
+	           	<td>选择角色:</td>
+	           	<td id="roleIds" colspan="3"></td>
+	           	</tr>
            </table>
        </form>
 	</div>

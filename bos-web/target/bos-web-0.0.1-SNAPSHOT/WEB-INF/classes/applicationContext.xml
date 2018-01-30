@@ -4,6 +4,8 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:soap="http://cxf.apache.org/bindings/soap"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context
@@ -11,7 +13,12 @@
 						http://www.springframework.org/schema/aop
 						http://www.springframework.org/schema/aop/spring-aop.xsd
 						http://www.springframework.org/schema/tx 
-						http://www.springframework.org/schema/tx/spring-tx.xsd">
+						http://www.springframework.org/schema/tx/spring-tx.xsd
+						http://cxf.apache.org/bindings/soap 
+						http://cxf.apache.org/schemas/configuration/soap.xsd
+						http://cxf.apache.org/jaxws 
+						http://cxf.apache.org/schemas/jaxws.xsd
+						">
 	
 	<!-- 加载属性文件 -->
 	<context:property-placeholder location="classpath:db.properties"/>
@@ -48,7 +55,76 @@
 	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
-	
+
+	<!-- 配置shiro的过滤器工厂bean -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager"></property>
+		<property name="loginUrl" value="/login.jsp"></property>
+		<property name="successUrl" value="/index.jsp"></property>
+		<property name="unauthorizedUrl" value="unauthorized.jsp"></property>
+		<!-- 指定url级别拦截策略 -->
+		<property name="filterChainDefinitions">
+			<value>
+				/css/** = anon
+				/js/** = anon
+				/images/** = anon
+				/login.jsp* = anon
+				/validatecode.jsp* = anon
+				/userAction_login* = anon
+				/page_base_staff* = perms["staff-list"]
+				/** = authc
+			</value>
+		</property>
+	</bean>
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="bosReal"></property>
+		<property name="cacheManager" ref="ehcache"></property>
+	</bean>
+
+	<bean id="ehcache" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<!--注入配置文件-->
+		<property name="cacheManagerConfigFile" value="classpath:ehcache.xml"></property>
+	</bean>
+
+	<bean id="bosReal" class="com.itheima.bos.realm.BOSRealm"></bean>
+
+	<!-- 开启shiro框架注解支持 -->
+	<bean id="defaultAdvisorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<!-- 必须使用cglib方式为Action对象创建代理对象 -->
+		<property name="proxyTargetClass" value="true"></property>
+	</bean>
+
+	<!-- 配置shiro框架提供的切面类，用于创建代理对象 -->
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor"></bean>
+
+	<!-- 配置job -->
+	<bean id="mailJob" class="com.itheima.bos.quartz.MailJob"></bean>
+
+	<!-- 配置jobdetail -->
+	<bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 用到的job实例 -->
+		<property name="targetObject" ref="mailJob"></property>
+		<!-- 用到的job方法-->
+		<property name="targetMethod" value="run"></property>
+	</bean>
+
+	<!-- 配置触发器 -->
+	<bean id="quartzTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="jobDetail"></property>
+		<!-- 每五秒执行一次 -->
+		<property name="cronExpression" value="0/5 * * * * ?"></property>
+	</bean>
+
+	<!-- 配置scheduler -->
+	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list >
+				<ref bean="quartzTrigger"></ref>
+			</list>
+		</property>
+	</bean>
+
 	<!-- 组件扫描 -->
 	<context:component-scan base-package="com.itheima.bos"/>
 	
@@ -56,4 +132,9 @@
 	<context:annotation-config/>
 	
 	<tx:annotation-driven/>
+	
+	<!-- 注册crm客户端代理对象 -->
+	<jaxws:client id="crmClient" 
+		serviceClass="com.itheima.crm.ICustomerService" 
+		address="http://localhost:8080/crm/service/customer"/>
 </beans>

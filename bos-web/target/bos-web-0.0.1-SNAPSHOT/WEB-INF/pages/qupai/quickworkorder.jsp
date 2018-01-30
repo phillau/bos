@@ -30,6 +30,7 @@
 	var editIndex ;
 	
 	function doAdd(){
+	    alert(editIndex);
 		if(editIndex != undefined){
 			$("#grid").datagrid('endEdit',editIndex);
 		}
@@ -164,6 +165,8 @@
 			onDblClickRow : doDblClickRow,
 			onAfterEdit : function(rowIndex, rowData, changes){
 				console.info(rowData);
+				$.post("workOrderAction_add.action",rowData,function(data){
+				});
 				editIndex = undefined;
 			}
 		});

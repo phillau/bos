@@ -1,3 +1,4 @@
+/*
 package com.itheima.bos.test;
 
 import java.io.File;
@@ -34,3 +35,4 @@ public class POITest {
 		}
 	}
 }
+*/
